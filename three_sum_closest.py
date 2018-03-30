@@ -7,11 +7,11 @@ class Solution:
         """
 
         nums.sort()
-        distance = 100
+        distance = 10000
         closest = 0
 
         for i in range(len(nums) - 2):
-            if i > 0 and nums[i] == nums[i+1]:
+            if i > 0 and nums[i] == nums[i-1]:
                 continue
             else:
                 left, right = i + 1, len(nums) - 1
@@ -30,7 +30,7 @@ class Solution:
                         right -= 1
 
                     else:
-                        if target - three_sum > distance:
+                        if target - three_sum < distance:
                             distance = target - three_sum
                             closest = three_sum
                         while right > left and nums[left] == nums[left+1]:
