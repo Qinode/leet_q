@@ -39,4 +39,5 @@ class Solution:
                     if p[i - 2] == s[j - 1] or p[i - 2] == '.':
                         table[i][j] |= table[i][j - 1]
 
+        print(table)
         return table[-1][-1]
