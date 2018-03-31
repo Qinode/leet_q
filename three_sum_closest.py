@@ -7,7 +7,7 @@ class Solution:
         """
 
         nums.sort()
-        distance = 10000
+        distance = pow(2, 31) - 1
         closest = 0
 
         for i in range(len(nums) - 2):
