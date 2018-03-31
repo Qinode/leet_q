@@ -1,6 +1,6 @@
-from four_sum import Solution
+from two_sum import Solution
 
 if __name__ =='__main__':
     solution = Solution()
 
-    print(solution.fourSum([1, 0, -1, 0, -2, 2], 0))
+    print(solution.twoSum([3,2,4], 6))
