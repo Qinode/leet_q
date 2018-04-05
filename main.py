@@ -1,4 +1,4 @@
-from swap_two_nodes_in_paris import ListNode, Solution
+from reverses_nodes_in_k_groups import ListNode, Solution
 
 if __name__ =='__main__':
     solution = Solution()
@@ -11,7 +11,7 @@ if __name__ =='__main__':
         copy.next = inode[i]
         copy = copy.next
 
-    res = solution.swapPairs(head)
+    res = solution.reverseKGroup(head, 7)
     while res is not None:
         print(res.val)
         res = res.next
