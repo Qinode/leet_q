@@ -1,4 +1,4 @@
-from remove_nth_node_from_end_of_list import Solution, ListNode
+from swap_two_nodes_in_paris import ListNode, Solution
 
 if __name__ =='__main__':
     solution = Solution()
@@ -11,7 +11,7 @@ if __name__ =='__main__':
         copy.next = inode[i]
         copy = copy.next
 
-    res = solution.removeNthFromEnd(head, 7)
+    res = solution.swapPairs(head)
     while res is not None:
         print(res.val)
         res = res.next
