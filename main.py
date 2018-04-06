@@ -1,17 +1,34 @@
-from reverses_nodes_in_k_groups import ListNode, Solution
+from merge_k_sorted_list import ListNode, Compared_Solution
 
 if __name__ =='__main__':
-    solution = Solution()
-    i = [1, 2, 3, 4, 5, 6, 7]
+    solution = Compared_Solution()
+    i = [1]
     inode = [ListNode(num) for num in i]
 
-    head = inode[0]
-    copy = head
+    l1 = inode[0]
+    copy =l1
     for i in range(1, len(inode)):
         copy.next = inode[i]
         copy = copy.next
 
-    res = solution.reverseKGroup(head, 7)
+    i = [0, 2, 5]
+    inode = [ListNode(num) for num in i]
+
+    l2 = inode[0]
+    copy =l2
+    for i in range(1, len(inode)):
+        copy.next = inode[i]
+        copy = copy.next
+
+    i = [-2, -1, 0, 2]
+    inode = [ListNode(num) for num in i]
+
+    l3 = inode[0]
+    copy =l3
+    for i in range(1, len(inode)):
+        copy.next = inode[i]
+        copy = copy.next
+    res = solution.mergeKLists([l2])
     while res is not None:
         print(res.val)
         res = res.next
