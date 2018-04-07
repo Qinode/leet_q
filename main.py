@@ -1,7 +1,7 @@
-from permutation import Solution
+from permutation_ii import Solution
 
 if __name__ =='__main__':
-    l = [1, 2, 3]
+    l = [1, 1, 2]
     solution = Solution()
-    res = solution.permute(l)
+    res = solution.permuteUnique(l)
     print(res)
