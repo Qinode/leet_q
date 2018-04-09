@@ -1,4 +1,5 @@
 class Solution:
+    # O(n) solution, sequential search
     def search(self, nums, target):
         """
         :type nums: List[int]
