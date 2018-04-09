@@ -1,7 +1,7 @@
-from permutation_ii import Solution
+from search_for_a_range import Solution
 
-if __name__ =='__main__':
-    l = [1, 1, 2]
+if __name__ == '__main__':
+    l = [8]
     solution = Solution()
-    res = solution.permuteUnique(l)
-    print(res)
+    index = solution.searchRange(l, 8)
+    print(index)
