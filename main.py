@@ -1,7 +1,7 @@
-from search_for_a_range import Solution
+from generate_parentheses import Solution
 
 if __name__ == '__main__':
-    l = [8]
     solution = Solution()
-    index = solution.searchRange(l, 8)
-    print(index)
+    r = solution.generateParenthesis(3)
+
+    print(r)
