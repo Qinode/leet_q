@@ -1,10 +1,16 @@
-from subset import Solution
+from word_search import Solution
 
 if __name__ == '__main__':
     solution = Solution()
-    # acc = [2]
-    r = solution.subsets([1, 2, 3])
-    # r = solution.sub_combination_sum(acc, [2, 3], 5)
 
+    board = [
+        ['A', 'B', 'C', 'E'],
+        ['S', 'F', 'C', 'S'],
+        ['A', 'D', 'E', 'E']
+    ]
+    board = [['a', 'b'], ['c', 'd']]
+
+    r = solution.exist(board, "abcd")
     print(r)
-    # print(acc)
+    # print(solution.get_moves(board, 0, 0))
+
