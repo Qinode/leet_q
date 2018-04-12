@@ -1,7 +1,10 @@
-from generate_parentheses import Solution
+from combination_sum import Solution
 
 if __name__ == '__main__':
     solution = Solution()
-    r = solution.generateParenthesis(3)
+    # acc = [2]
+    r = solution.combinationSum([2, 3, 6, 7], 7)
+    # r = solution.sub_combination_sum(acc, [2, 3], 5)
 
     print(r)
+    # print(acc)
