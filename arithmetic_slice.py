@@ -16,9 +16,11 @@ class Solution:
                             dp[i][j] = (True, A[j] - A[j - 1])
                             res += 1
                     else:
-                        _, slice = dp[i][j - 1]
-                        if A[j] - A[j - 1] == slice:
+                        is_slice, slice = dp[i][j - 1]
+                        if is_slice and A[j] - A[j - 1] == slice:
                             dp[i][j] = (True, slice)
                             res += 1
+                        else:
+                            break
 
         return res
