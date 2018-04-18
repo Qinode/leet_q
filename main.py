@@ -1,7 +1,7 @@
-from word_break import Solution
+from unique_path import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    r = solution.wordBreak("goalspecial", ["go","goal","goals","special"])
+    r = solution.uniquePaths(7, 3)
     print(r)
