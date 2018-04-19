@@ -1,13 +1,14 @@
-from unique_path_ii import Solution
+from triangle import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
     path = [
-        [0, 0, 0],
-        [0, 1, 0],
-        [0, 0, 0]
+        [2],
+        [3, 4],
+        [6, 5, 7],
+        [4, 1, 8, 3]
     ]
 
-    r = solution.uniquePathsWithObstacles(path)
+    r = solution.minimumTotal(path)
     print(r)
