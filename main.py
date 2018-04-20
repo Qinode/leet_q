@@ -1,13 +1,13 @@
-from unique_path_ii import Solution
+from minimum_path_sum import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
     path = [
-        [0, 0, 0],
-        [0, 1, 0],
-        [0, 0, 0]
+        [1, 3, 1],
+        [1, 5, 1],
+        [4, 2, 1]
     ]
 
-    r = solution.uniquePathsWithObstacles(path)
+    r = solution.minPathSum(path)
     print(r)
