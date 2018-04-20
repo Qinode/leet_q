@@ -1,14 +1,9 @@
-from triangle import Solution
+from maximum_product_subarray import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = [
-        [2],
-        [3, 4],
-        [6, 5, 7],
-        [4, 1, 8, 3]
-    ]
+    path = [2, 3, 2, -4]
 
-    r = solution.minimumTotal(path)
+    r = solution.maxProduct(path)
     print(r)
