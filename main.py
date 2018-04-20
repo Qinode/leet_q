@@ -1,13 +1,14 @@
-from minimum_path_sum import Solution
+from triangle import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
     path = [
-        [1, 3, 1],
-        [1, 5, 1],
-        [4, 2, 1]
+        [2],
+        [3, 4],
+        [6, 5, 7],
+        [4, 1, 8, 3]
     ]
 
-    r = solution.minPathSum(path)
+    r = solution.minimumTotal(path)
     print(r)
