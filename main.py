@@ -1,9 +1,9 @@
-from maximum_subarray import Solution
+from decode_ways import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = [-1, 0]
+    path = '110'
 
-    r = solution.maxSubArray(path)
+    r = solution.numDecodings(path)
     print(r)
