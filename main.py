@@ -1,9 +1,9 @@
-from maximum_product_subarray import Solution
+from maximum_subarray import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = [2, 3, 2, -4]
+    path = [-1, 0]
 
-    r = solution.maxProduct(path)
+    r = solution.maxSubArray(path)
     print(r)
