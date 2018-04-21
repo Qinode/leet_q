@@ -1,9 +1,9 @@
-from robber_house_ii import Solution
+from maximal_square import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = [1, 2, 3, 4, 5]
+    path = [["0","1"]]
 
-    r = solution.rob(path)
+    r = solution.maximalSquare(path)
     print(r)
