@@ -1,9 +1,9 @@
-from decode_ways import Solution
+from robber_house_ii import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = '110'
+    path = [1, 2, 3, 4, 5]
 
-    r = solution.numDecodings(path)
+    r = solution.rob(path)
     print(r)
