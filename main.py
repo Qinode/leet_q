@@ -1,9 +1,9 @@
-from maximal_square import Solution
+from longest_increasing_subsequence import Solution
 
 if __name__ == '__main__':
     solution = Solution()
 
-    path = [["0","1"]]
+    path = [10, 9, 2, 5, 3, 4]
 
-    r = solution.maximalSquare(path)
+    r = solution.lengthOfLIS(path)
     print(r)
