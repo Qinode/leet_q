@@ -1,3 +1,5 @@
+import copy
+
 class Solution:
     def solveNQueens(self, n):
         """
@@ -5,25 +7,47 @@ class Solution:
         :rtype: List[List[str]]
         """
 
-        position = [i for i in range(n)]
         board = [['.' for _ in range(n)] for _ in range(n)]
         acc = []
-        self.backtracking(acc, board, position)
-        return acc
+        self.backtracking(acc, board, 0, n)
 
-    def valid_board(self, board):
+        result = []
+        for ans_board in acc:
+            str_board = []
+            for row in ans_board:
+                str_board.append(''.join(row))
+            result.append(str_board)
+
+        return result
+
+    def valid_board(self, board, x, y):
+
+        for i in range(x):
+            if board[i][y] == 'Q':
+                return False
+
+        for i, j in zip(reversed(range(x)), reversed(range(y))):
+            if board[i][j] == 'Q':
+                return False
+
+        for i, j in zip(reversed(range(x)), range(y + 1, len(board))):
+            if board[i][j] == 'Q':
+                return False
 
         return True
 
-    def backtracking(self, acc, board, position):
-        if self.valid_board(board):
-            if len(position) == 0:
-                acc.append(board)
-                return
-            else:
-                for index, pos in enumerate(position):
-                    board[len(board) - len(position)][position[index]] = 'Q'
-                    self.backtracking(board, (position[0:index] + position[index + 1:]))
-                    board[len(board) - len(position)][position[index]] = '.'
+    def backtracking(self, acc, board, row, n):
+
+        if row == n:
+            acc.append(copy.deepcopy(board))
+            return
         else:
+            for j in range(n):
+                if self.valid_board(board, row, j):
+                    board[row][j] = 'Q'
+                    self.backtracking(acc, board, row + 1, n)
+                    board[row][j] = '.'
+                else:
+                    continue
+
             return
