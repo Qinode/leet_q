@@ -13,19 +13,22 @@ class Solution:
         :rtype: List[List[int]]
         """
 
-        if root == None:
+        if root is None:
             return []
         else:
             result = []
 
-            queue = [root]
+            queue = [(root, 0)]
             while len(queue) != 0:
-                node = queue[0]
+                node, level = queue[0]
                 del queue[0]
                 if node is not None:
-                    result.append(node.val)
-                    queue.append(node.left)
-                    queue.append(node.right)
+                    if len(result) == level:
+                        result.append([node.val])
+                    else:
+                        result[level].append(node.val)
+                    queue.append((node.left, level + 1))
+                    queue.append((node.right, level + 1))
 
             return result
 
