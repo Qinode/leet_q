@@ -19,8 +19,6 @@ class Solution:
             middle.next = None
             return self.merge_sort(self.sortList(head), self.sortList(right))
 
-            return stack[-1]
-
     def find_middle(self, linked_list):
         fast, slow = linked_list, linked_list
         while fast and fast.next and fast.next.next:
