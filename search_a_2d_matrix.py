@@ -12,12 +12,10 @@ class Solution(object):
             found = False
             for row in matrix:
                 if len(row) != 0:
-                    if row[0] <= target:
+                    if row[-1] >= target:
                         found = self.binary_search(row, target)
-                        if found:
-                            return found
-                    else:
                         break
+
             return found
 
     def binary_search(self, array, target):
