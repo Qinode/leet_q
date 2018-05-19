@@ -24,11 +24,12 @@ class Solution(object):
                 if heap:
                     c = heapq.heappop(heap)
                     cnt += 1
-                    if c < -1:
+                    if c < 0:
                         stack.append(c + 1)
 
             for item in stack:
-                heapq.heappush(heap, item)
+                if item < 0:
+                    heapq.heappush(heap, item)
 
             ans += n if heap else cnt
 
