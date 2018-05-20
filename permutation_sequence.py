@@ -21,3 +21,4 @@ class Solution:
             k -= index * factorial[n - i]
 
         return ''.join([str(n) for n in res])
+    
